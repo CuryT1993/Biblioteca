@@ -50,6 +50,9 @@ include 'auth.php';
     </div>
 
     <form method="POST" action="procesar_venta.php" id="formVenta" target="_blank">
+
+        <input type="hidden" name="id_usuario" id="id_usuario" value="<?= $_SESSION['usuario_id'] ?>">
+
         <div class="mb-3">
             <label for="cedula">Cédula del Cliente:</label>
             <input type="text" name="cedula" id="cedula" class="form-control" required>
@@ -86,8 +89,8 @@ include 'auth.php';
         ?>
             </tbody>
         </table>
-
-        <input type="hidden" name="id_usuario" id="id_usuario">
+        <!-- 
+        <input type="hidden" name="id_usuario" id="id_usuario"> -->
         <button type="submit" class="btn btn-success">Procesar Venta</button>
     </form>
 
